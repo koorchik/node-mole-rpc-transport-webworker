@@ -1,12 +1,12 @@
 {
-    "name": "client-connects-to-server",
+    "name": "send-work-to-webworker",
     "version": "1.0.0",
     "description": "",
-    "main": "client.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "parcel -p 1234 watch index.html"
     },
+    "private": true,
     "author": "",
     "license": "ISC",
     "dependencies": {
