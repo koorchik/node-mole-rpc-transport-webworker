@@ -1,6 +1,6 @@
 {
     "name": "mole-rpc-transport-webworker",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Easy way to communicate with webworker using Mole-RPC (JSON RPC library)",
     "main": "index.js",
     "scripts": {
