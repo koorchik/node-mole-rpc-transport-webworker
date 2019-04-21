@@ -8,19 +8,19 @@ import TransportClient from '../../TransportClient';
 import { sum, multiply } from '../utils';
 
 async function main() {
-    // Server
+    // Server which will receice commands to the "self"
     const server = new MoleServer({ transports: [new TransportServer({ worker: self })] });
     server.expose({ sum, multiply });
     await server.run();
 
-    // Client
+    // Client which will reply via the "self"
     const client = new MoleClient({
         requestTimeout: 1000,
         transport: new TransportClient({ worker: self })
     });
 
     console.log(await client.divide(2, 3));
-    console.log(await client.substract(2, 3));
+    console.log(await client.substract(5, 3));
 }
 
 main().catch(console.error);

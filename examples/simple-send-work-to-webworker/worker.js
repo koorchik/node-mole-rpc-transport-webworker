@@ -1,10 +1,10 @@
 import 'babel-polyfill';
-import factory from '../../factory';
+import expose from '../../expose';
 
 import { sum, multiply } from '../utils';
 
 async function main() {
-    await factory.expose({ sum, multiply });
+    await expose({ sum, multiply });
 }
 
 main().catch(console.error);

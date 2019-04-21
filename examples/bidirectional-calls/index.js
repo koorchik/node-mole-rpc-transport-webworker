@@ -8,12 +8,12 @@ import { substract, divide } from '../utils';
 async function main() {
     const worker = new Worker('worker.js');
 
-    // Server
+    // Server which will receive commands from the worker
     const server = new MoleServer({ transports: [new TransportServer({ worker })] });
     server.expose({ substract, divide });
     await server.run();
 
-    // // Client
+    // Client to send commands to the worker
     const client = new MoleClient({
         requestTimeout: 1000,
         transport: new TransportClient({ worker })

@@ -14,6 +14,6 @@
         "mole-rpc": "^0.3.2"
     },
     "devDependencies": {
-        "parcel-bundler": "^1.11.0"
+        "parcel-bundler": "^1.12.3"
     }
 }
