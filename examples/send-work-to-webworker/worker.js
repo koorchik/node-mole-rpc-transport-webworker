@@ -4,7 +4,12 @@ import TransportServer from '../../TransportServer';
 import { sum, multiply } from '../utils';
 
 async function main() {
-    const server = new MoleServer({ transports: [new TransportServer({ worker: self })] });
+    const server = new MoleServer({
+        transports: [
+            new TransportServer({ worker: self })
+        ]
+    });
+
     server.expose({ sum, multiply });
     await server.run();
 }

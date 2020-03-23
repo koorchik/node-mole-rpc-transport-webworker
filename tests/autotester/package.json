@@ -1,5 +1,5 @@
 {
-    "name": "bidirectional-calls",
+    "name": "autotester",
     "version": "1.0.0",
     "description": "",
     "scripts": {
@@ -11,7 +11,8 @@
     "license": "ISC",
     "dependencies": {
         "babel-polyfill": "^6.26.0",
-        "mole-rpc": "1.*"
+        "mole-rpc": "1.*",
+        "mole-rpc-autotester": "1.*"
     },
     "devDependencies": {
         "parcel-bundler": "^1.12.4"

@@ -19,8 +19,15 @@ async function main() {
         transport: new TransportClient({ worker: self })
     });
 
-    console.log(await client.divide(2, 3));
-    console.log(await client.substract(5, 3));
+    console.log(
+        'Result from main thread in worker',
+        await client.divide(2, 3)
+    );
+
+    console.log(
+        'Result from main thread in worker',
+        await client.substract(2, 3)
+    );
 }
 
 main().catch(console.error);

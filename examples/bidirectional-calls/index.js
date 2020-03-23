@@ -19,8 +19,15 @@ async function main() {
         transport: new TransportClient({ worker })
     });
 
-    console.log(await client.sum(2, 3));
-    console.log(await client.multiply(2, 3));
+    console.log(
+        'Result from webworker in main thread',
+        await client.sum(2, 3)
+    );
+
+    console.log(
+        'Result from webworker in main thread',
+        await client.multiply(2, 3)
+    );
 }
 
 main().then(console.log, console.error);

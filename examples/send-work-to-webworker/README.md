@@ -7,4 +7,4 @@ Full syntax example
 1. npm install
 2. npm start
 3. Open http://localhost:1234/
-4. Open browser dev tools to see logs
+4. Open browser dev tools to see call logs
