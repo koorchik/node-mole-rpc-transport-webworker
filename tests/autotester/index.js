@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import MoleClient from 'mole-rpc/MoleClient';
 import MoleClientProxified from 'mole-rpc/MoleClientProxified';
 import MoleServer from 'mole-rpc/MoleServer';

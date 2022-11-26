@@ -4,17 +4,19 @@
     "description": "",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "parcel -p 1234 watch index.html"
+        "start": "parcel -p 1234 index.html"
     },
     "private": true,
+    "browserslist": "> 0.5%, last 2 versions, not dead",
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "babel-polyfill": "^6.26.0",
         "mole-rpc": "1.*",
         "mole-rpc-autotester": "1.*"
     },
     "devDependencies": {
-        "parcel-bundler": "^1.12.4"
+        "buffer": "^5.7.1",
+        "parcel": "^2.8.0",
+        "process": "^0.11.10"
     }
 }
