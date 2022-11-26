@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import MoleClient from 'mole-rpc/MoleClientProxified';
 import MoleServer from 'mole-rpc/MoleServer';
 import TransportClient from '../../TransportClient';
@@ -6,7 +5,7 @@ import TransportServer from '../../TransportServer';
 import { substract, divide } from '../utils';
 
 async function main() {
-    const worker = new Worker('worker.js');
+    const worker = new Worker(new URL('worker.js', import.meta.url), { type: "module" });
 
     // Server which will receive commands from the worker
     const server = new MoleServer({ transports: [new TransportServer({ worker })] });

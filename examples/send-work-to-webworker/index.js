@@ -1,9 +1,11 @@
-import 'babel-polyfill';
 import MoleClient from 'mole-rpc/MoleClientProxified';
 import TransportClient from '../../TransportClient';
 
 async function main() {
-    const worker = new Worker('worker.js');
+    const worker = new Worker(
+        new URL('worker.js', import.meta.url), 
+        { type: "module" }
+    );
 
     const client = new MoleClient({
         requestTimeout: 1000,

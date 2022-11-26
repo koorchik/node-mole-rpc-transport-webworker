@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import MoleServer from 'mole-rpc/MoleServer';
 import TransportServer from '../../TransportServer';
 import { sum, multiply } from '../utils';
